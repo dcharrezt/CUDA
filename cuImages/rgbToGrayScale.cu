@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <CImg.h>
-#include <iostream>
-#include <string>
-
-using namespace cimg_library;
-using namespace std;
-
+ilesih#cd<mh#cd<se>ilesi>unnea mlryunnea d
 __global__
 void rgba_to_greyscale(const uchar4* const rgbaImage,
                       unsigned char* const greyImage,
@@ -46,9 +39,11 @@ int main() {
 
 	CImg<unsigned char> image(input_file),
 		grayWeight(image.width(), image.height(), 1, 1, 0);
-	image_rows = image.width();
-	image_cols = image.height();
+	
+	const int image_rows = image.width();
+	const int image_cols = image.height();
 
+	uchar4	h_rgbImage[]
 
 // for all pixels x,y in image
   cimg_forXY(image,x,y) {
