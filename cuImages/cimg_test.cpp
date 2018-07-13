@@ -17,16 +17,7 @@ int main() {
   cimg_forXY(image,x,y) {
     imgR(x,y,0,0) = image(x,y,0,0),    // Red component of image sent to imgR
     imgG(x,y,0,1) = image(x,y,0,1),    // Green component of image sent to imgG
-    imgB(x,y,0,2) = image(x,y,0,2);    // Blue component of image sent to imgB
- 
-    // want to print out the RGB value of each pixel? Uncomment the following:
-    /*
-    * cout << image.width() << "x" << image.height() << endl;
-    * cout << "(" << x << "," << y << ") ="
-    *             << " R:" << (int)image(x,y,0,0)
-    *             << " G:" << (int)image(x,y,0,1)
-    *             << " B:" << (int)image(x,y,0,2) << endl;
-    */
+    imgB(x,y,0,2) = image(x,y,0,2);    // Blue component of image sent to imgB:
  
     // Separation of channels
     int R = (int)image(x,y,0,0);
@@ -42,13 +33,13 @@ int main() {
 }
  
   // 4 display windows, one for each image
-  CImgDisplay main_disp(image,"Original"),
+/*  CImgDisplay main_disp(image,"Original"),
       draw_dispR(imgR,"Red"),
       draw_dispG(imgG,"Green"),
       draw_dispB(imgB,"Blue"),
       draw_dispGr(gray,"Gray"),
       draw_dispGrWeight(grayWeight,"Gray (Weighted)");
- 
+ */
   // wait until main window is closed
 //  while (!main_disp.is_closed()){
 //      main_disp.wait();
